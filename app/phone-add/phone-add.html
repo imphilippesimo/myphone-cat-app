@@ -1,0 +1,12 @@
+<form name="newPhoneForm">
+    <label> Nom:
+        <input type="text" ng-model="vm.phone.name" required />
+    </label>
+    <br/>
+    <label>Commentaire:
+        <input type="text" ng-model="vm.phone.snippet" required />
+    </label>
+    <br/>
+    <input type="reset" value="Effacer" />
+    <input ng-if="newPhoneForm.$valid" type="submit" value="Soumettre" ng-click="vm.add()" />
+</form>
