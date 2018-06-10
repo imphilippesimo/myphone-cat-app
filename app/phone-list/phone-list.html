@@ -1,8 +1,27 @@
-<h1>Number of phones: {{vm.phones.length}}</h1>
+<h2>
+    Nombre de téléphones: {{vm.phones.length}}</h2>
+
+<div class="form-group">
+    <label for="search">Recherche :</label>
+    <input id="search" ng-model="vm.query" />
+</div>
+
+<div class="form-group">
+    <label for="sortOrder">Trier par :</label>
+    <select class="form-control" id="sortOrder" ng-model="vm.orderProp">
+        <option value="name">Aphabetique</option>
+        <option value="age">Plus récent</option>
+
+    </select>
+</div>
 
 <ul>
-    <li ng-repeat="phone in vm.phones">
-        <span>{{phone.name}}</span>
+    <li ng-repeat="phone in vm.phones | filter:vm.query| orderBy:vm.orderProp" class="thumbnail">
+
+        <a href="#/phones/{{phone.id}}" class="img-thumbnail float-left">
+            <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+        </a>
+        <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
         <p>
             {{phone.snippet}}
         </p>

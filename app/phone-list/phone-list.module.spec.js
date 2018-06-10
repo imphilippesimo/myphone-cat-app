@@ -1,9 +1,9 @@
 describe('phoneList', function() {
 
-    // Load the module that contains the `phoneList` component before each test
+    // Charger le module qui contient le composant `phoneList` avant chaque test
     beforeEach(module('phonecatApp'));
   
-    // Test the controller
+    // tester le contrôleur
     describe('PhoneListController', function() {
   
       it('should create a `phones` model with 3 phones', inject(function($componentController) {

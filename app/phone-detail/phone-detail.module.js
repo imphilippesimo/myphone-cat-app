@@ -1,0 +1,1 @@
+var phoneDetail = angular.module('phoneDetail',['phoneProvider','ngRoute']);

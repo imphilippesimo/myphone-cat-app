@@ -1,6 +1,8 @@
 
 var phonecatApp = angular.module('phonecatApp',[
     'phoneAdd',
-    'phoneList'
+    'phoneList',
+    'phoneDetail',
+    'ngRoute'
 ]);
 
